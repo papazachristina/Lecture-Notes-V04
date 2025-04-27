@@ -1,0 +1,306 @@
+\documentclass[12pt]{book}
+\usepackage[margin=.85in]{geometry} % for MARGIN
+\usepackage[many]{tcolorbox}    	% for COLORED BOXES (tikz and xcolor included)
+
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{multicol}   
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage{varwidth}
+\usepackage{tasks}
+\usepackage[export]{adjustbox}
+\usepackage{array} % For m{} column type
+
+\usepackage{titleps}
+\usepackage{setspace}               % for LINE SPACING
+\usepackage[⟨options⟩]{fancyhdr}
+\usepackage{enumitem}
+\setlist{nosep}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.5.1}
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+
+\newcommand{\D}{\displaystyle}
+\newcommand\Mydiv[2]{%
+$\strut#1$\kern.25em\smash{\raise.3ex\hbox{$\big)$}}\mkern-8mu
+        \overline{\enspace\strut#2}}
+
+
+\setlength\parindent{0pt}   % killing indentation for all the text
+\setstretch{1.3}            % setting line spacing to 1.3
+\setlength\columnsep{0.25in} % setting length of column separator
+\pagestyle{fancy}           % setting pagestyle to be headings
+
+\usepackage[]{titlesec}
+
+\fancyhead[L]{Math V04 - College Algebra}
+\fancyhead[R]{Christina Papazacharioudakis}
+
+\tcbset{
+    sharp corners,
+    colback = white,
+    before skip = 0.2cm,    % add extra space before the box
+    after skip = 0.5cm      % add extra space after the box
+}                           % setting global options for tcolorbox
+
+    \newtcolorbox{boxR}{
+    fontupper = \color{black}, % font color
+    boxrule = 1.5pt,
+    colframe = black,
+    rounded corners,
+    arc = 5pt   % corners roundness
+}
+
+
+
+\begin{document}
+
+
+{\Large \textbf{5.5 Zeros of Polynomial Functions}}
+\vspace{1mm}
+
+In this section, we will discuss a variety of tools for writing polynomial functions and solving polynomial equations. We start this sections off by using polynomial division to help us find the zeros of a polynomial and then writing it's corresponding linear factors.
+\vspace{3mm}
+
+{\large \textbf{Using the Factor Theorem to Solve a Polynomial Equation}}
+
+
+Let's start by dividing $f(x) =x^2-4x-5$ by $x+1$ using synthetic division: 
+
+\vspace{60mm}
+
+Making sense of this division, we have $\D \frac{x^2-4x-5}{x+1}=$
+
+\vspace{10mm}
+In light of the Division Algorithm, we can make sense of this division as:
+$$f(x) = x^2-4x-5=$$
+
+\vspace{5mm}
+
+
+In section 5.3, we observed how the zeros of a polynomial related to its linear factors. As a review, let's find the zeros of $f(x)=x^2-4x-5$.
+\vspace{45mm}
+\begin{boxR}
+   \textbf{The Factor Theorem}
+    \vspace{1mm}
+    \hline
+    \vspace{2mm}
+    $$ (x-k) \text{ is a factor of } f(x) \hspace{1mm} \text{ if and only if }  k \hspace{1mm} \text{ is a zero of } f(x)$$
+\end{boxR}
+
+
+
+\newpage
+
+
+
+\begin{boxR}
+    \textbf{How To}
+    \vspace{1mm}
+    \hline
+    \vspace{2mm}
+\textbf{Given a factor and a third-degree polynomial, use the Factor Theorem to factor the polynomial.}
+
+\begin{enumerate}
+    \item Use synthetic division to divide the polynomial by $(x-k)$
+    \item Confirm that the remainder is $0$.
+    \item Write the polynomial as the product of $(x-k)$
+  and the quadratic quotient.
+    \item If possible, factor the quadratic.
+    \item Write the polynomial as the product of factors.  
+\end{enumerate}
+\end{boxR}
+
+\underline{\textbf{Example 1 - Using the Factor Theorem to Find the Zeros of a Polynomial Expression}}
+
+Show that $(x+2)$ is a factor of $x^3-6x^2-x+30$. Find the remaining factors. Use the factors to determine the zeros of the polynomial.
+
+\newpage
+
+
+\newpage
+{\large \textbf{Using the Rational Zero Theorem to Find Rational Zeros}}
+
+Sometimes the zeros of a polynomial are not always integers. They might be rational numbers. We now look at how to find rational zeros of a polynomial using the \textbf{Rational Zero Theorem}. Let's demonstrate this theorem with an example.
+
+\vspace{3mm}
+
+Consider a quadratic function with two zeros $\D x=\frac{2}{5}$ and $\D x=\frac{3}{4}$. By the Factor Theorem,
+
+The zero $\D x=\frac{2}{5}$ has the factor: 
+\vspace{2mm}
+
+The zero $\D x=\frac{3}{4}$ has the factor: 
+\vspace{2mm}
+
+Setting each factor to zero: 
+
+\vspace{20mm}
+
+Multiplying each side to eliminate fractions:
+
+
+\vspace{20mm}
+
+We can now create a quadratic function:
+
+\vspace{20mm}
+Expanding the polynomial we have...
+
+\vspace{20mm}
+Or...
+
+\vspace{40mm}
+
+
+
+We can infer that the \textbf{numerators} of the rational roots will always be factors of the \textbf{constant term} and the \textbf{denominators} will be factors of the \textbf{leading coefficient}. This is the idea of the Rational Zero Theorem; it gives us a pool of possible rational zeros.
+
+\newpage
+
+\begin{boxR}
+  \textbf{The Rational Zero Theorem}
+    \vspace{1mm}
+    \hline
+    \vspace{2mm}
+Given a polynomial $$\D f(x)=a_nx^n + a_{n-1}x^{n-1} + \ldots + a_1x+a_0$$ with integer coefficients and $a_n \neq 0$, every rational zero of $f(x)$ has the form $\D \frac{p}{q}$ where:
+\begin{itemize}
+    \item $p$ is a factor of the constant term, $a_0$
+    \item $q$ is a factor of the leading term, $a_n$
+\end{itemize}
+ All possible values of $\frac{p}{q}$ (reduced to lowest terms) create a pool of candidates on what the zeros of a polynomial \textit{could} be.
+\end{boxR}
+
+
+\underline{\textbf{Example 2 - List All Possible Rational Zeros}}
+
+List all possible rational zeros of $f(x)=2x^4-5x^3+x^2-4$.
+
+
+\newpage
+
+\underline{\textbf{Example 3 - Use the Rational Zero Theorem to Find Rational Zeros}}
+
+Use the Rational Zero Theorem to find the rational zeros of $f(x) = 2x^3 + x^2 - 4x+1$. 
+
+
+
+\newpage
+{\large \textbf{Finding the Zeros of Polynomial Functions with Synthetic Division}}
+
+Since the \textbf{Rational Zero Theorem} gives us the candidates of possible rational zeros for a polynomial function, we can also use synthetic division to check which ones are the zeros.
+
+\begin{boxR}
+  \textbf{  How To}
+  \vspace{1mm}
+  \hline
+  \vspace{2mm}
+\textbf{Given a polynomial function, use synthetic division to find its zeros.}
+\begin{enumerate}
+    \item Use the Rational Zero Theorem to list all possible rational zeros of the function.
+    \item Use synthetic division to check if a candidate is a zero.
+        \begin{itemize}
+             \item  If the remainder is $0$, the candidate is a zero. If the remainder is not zero, discard the candidate.
+         \end{itemize}
+    \item Repeat step two using the quotient found with synthetic division. If possible, continue until the quotient is a quadratic.
+    \item Find the zeros of the quadratic function. Two possible methods for solving quadratics are factoring and using the quadratic formula.
+\end{enumerate}
+\end{boxR}
+
+
+\underline{\textbf{Example 4 - Finding the Zeros of a Polynomial Function with Synthetic Division}} 
+
+Find the zeros of $\D f(x)=x^4-2x^3-7x^2+8x+12$.
+
+
+
+\newpage
+\textbf{ }
+\vspace{210mm}
+
+Now let's look at another example following this same process...
+\newpage
+
+\underline{\textbf{Example 5 - Finding the Zeros of a Polynomial Function with Synthetic Division}} 
+
+Find the zeros of $f(x)=5x^3+27x^2+11x+5$. 
+
+
+\newpage
+As we just saw, a polynomial $f(x)$ can have complex zeros. This leads to the Fundamental Theorem of Algebra.
+
+\begin{boxR}
+    \textbf{The Fundamental Theorem of Algebra}
+    \vspace{1mm}
+    \hline
+    \vspace{2mm}
+    If $f(x)$ is a polynomial of degree $n \geq 1$, then $f(x)$ has at least one complex zero.
+\end{boxR}
+
+\textbf{Note:} A real number $a$ is also a complex number with an imaginary part of zero: $a=a+0i$. So when we say ``at least one complex number" this could be a real number.
+
+\vspace{3mm}
+
+\begin{boxR}
+    \textbf{The Linear Factorization Theorem}
+    \vspace{1mm}
+    \hline
+    \vspace{2mm}
+    If $f(x)=a_nx^n + a_{n-1}x^{n-1}+ \ldots +a_1x+a_0$ where $n \geq 1$
+and $a_n \neq 0$, then $f(x)$ has exactly $n$ linear factors and can be written as:
+    $$f(x)=a_n(x-c_1)(x-c_2)(x-c_3)\cdots (x-c_n)$$
+
+    where $c_1, \ldots c_n$ are complex numbers (possibly real and not necessarily distinct). 
+    \end{boxR}
+
+
+
+
+
+\vspace{10mm}
+In Example 4, we found the zeros of $f(x)=5x^3+27x^2+11x+5$ to be:
+
+$5, -5, \hspace{1mm} -\frac{1}{5}+ \frac{2}{5}i, \hspace{1mm} -\frac{1}{5} - \frac{2}{5}i$.
+\vspace{5mm}
+
+Referencing the Linear Factorization Theorem, let's re-write $f(x)=5x^3+27x^2+11x+5$ in it's factored form:
+
+
+\vspace{45mm}
+
+\begin{boxR}
+    If $a+bi$ is a zero of a polynomial ($b\neq 0$), then $a-bi$ is also a zero. 
+\end{boxR}
+\newpage
+
+{\large \textbf{Using the Linear Factorization Theorem to Find Polynomials with Given Zeros}}
+
+Many of our problems so far have involved finding the zeros of a polynomial function that has been given. The Linear Factorization Theorem enables us to reverse this process: find the polynomial function when the zeros are given.  
+
+\vspace{3mm}
+\begin{boxR}
+    \textbf{How To}
+    \vspace{1mm}
+    \hline
+    \vspace{2mm}
+Given the zeros of a polynomial and a point $(c, f(c))$ on its graph, use the Linear Factorization Theorem to find the polynomial function.
+\begin{enumerate}
+    \item Use the zeros to construct the linear factors of the polynomial.
+    \item Multiply the linear factors to expand the polynomial.
+    \item Substitute $(c, f(c))$ into the function to determine the leading coefficient, $a_n$.
+    \item Simplify.
+\end{enumerate}
+\end{boxR}
+
+\underline{\textbf{Example 6 - Use the Linear Factorization Theorem to Find a Polynomial}} 
+
+Find the fourth degree polynomial $f(x)$ that has zeros of $-3, -2, i$ such that $f(-2)=100$.
+
+
+
+\end{document}
+
+
