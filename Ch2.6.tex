@@ -1,0 +1,267 @@
+\documentclass[12pt]{book}
+\usepackage[margin=.85in]{geometry} % for MARGIN
+\usepackage[many]{tcolorbox}    	% for COLORED BOXES (tikz and xcolor included)
+
+
+\usepackage{multicol}   
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage{varwidth}
+\usepackage{tasks}
+\usepackage[export]{adjustbox}
+
+\usepackage{titleps}
+\usepackage{setspace}               % for LINE SPACING
+\usepackage[⟨options⟩]{fancyhdr}
+\usepackage{enumitem}
+\setlist{nosep}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.5.1}
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+
+\newcommand{\D}{\displaystyle}
+
+
+\setlength\parindent{0pt}   % killing indentation for all the text
+\setstretch{1.3}            % setting line spacing to 1.3
+\setlength\columnsep{0.25in} % setting length of column separator
+\pagestyle{fancy}           % setting pagestyle to be headings
+
+\usepackage[]{titlesec}
+
+\fancyhead[L]{Math V04 - College Algebra}
+\fancyhead[R]{Christina Papazacharioudakis}
+
+\tcbset{
+    sharp corners,
+    colback = white,
+    before skip = 0.2cm,    % add extra space before the box
+    after skip = 0.5cm      % add extra space after the box
+}                           % setting global options for tcolorbox
+
+    \newtcolorbox{boxR}{
+    fontupper = \color{black}, % font color
+    boxrule = 1.5pt,
+    colframe = black,
+    rounded corners,
+    arc = 5pt   % corners roundness
+}
+
+\definecolor{ballblue}{rgb}{0.13, 0.67, 0.8}
+
+\begin{document}
+
+
+{\Large \textbf{2.6 Other Types of Equations}}
+
+We have solved linear equations, rational equation that resulted in linear equations, and quadratic equations using several methods. However, there are many other types of equations, and we will investigate a few more types in this section.
+
+\vspace{3mm}
+
+{\large \textbf{Solving Equations Involving Rational Exponents}}
+\vspace{3mm}
+\begin{boxR}
+    \textbf{Rational Exponents}
+    \vspace{1mm}
+    \hline
+    \vspace{2mm}
+   A rational exponent indicates a power in the numerator and a root in the denominator. There are multiple ways of writing an expression, a variable, or a number with a rational exponent using exponent rules:
+   \begin{align*}
+       a^{\frac{m}{n}} &= \left(a^\frac{1}{n}\right)^m =  \left(\sqrt[n]{a}\right)^m \\
+       a^{\frac{m}{n}} &= \left(a^m\right)^\frac{1}{n} =\sqrt[n]{a^m}
+   \end{align*}
+\end{boxR}
+
+\underline{\textbf{Example 1 - Evaluating a Number Raised to a Rational Exponent}}.
+\vspace{1mm}
+
+Evaluate $8^\frac{2}{3}$.
+
+\vspace{25mm}
+
+\underline{\textbf{Example 2 - Solve the Equation Involving Rational Exponents}}.
+\vspace{1mm}
+
+
+Solve the equation $\D x^{\frac{5}{4}}=32$.
+\vspace{25mm}
+
+
+\underline{\textbf{Example 3 - Solve the Equation Involving Rational Exponents and Factoring}}
+\vspace{1mm}
+
+Solve $3x^{\frac{3}{4}} = x^\frac{1}{2}$.
+
+\newpage
+\textbf{\large Solving Equations Using Factoring}
+\vspace{3mm}
+
+We have used factoring to solve quadratic equations, but it is a technique that we can use with many types of polynomial equations. Lets take a look!
+\\
+
+\underline{\textbf{Example 4 - Solving a Polynomial by Factoring}}
+
+Solve the polynomial by factoring: $5x^4 = 80x^2$.
+\vspace{35mm}
+
+
+\underline{\textbf{Example 5 - Solving a Polynomial by Grouping}}
+
+Solve the polynomial by grouping: $x^3+x^2-9x-9=0$.
+\vspace{35mm}
+
+
+{\large \textbf{Solving Radical Equations}}
+
+\textbf{Radical Equations} are equations that contain variables in the radicand (the expression under the radical symbol). Here are some examples: 
+\begin{align*}
+    \sqrt{3x+8} &= x \\
+    \sqrt{x+3} &= x-3 \\
+    \sqrt{x+5} - \sqrt{x-3} &= 2 
+\end{align*}
+
+\newpage
+
+\begin{boxR}
+    \textbf{How To}
+    \vspace{1mm}
+    \hline
+    \vspace{2mm}
+    \textbf{Given a radical equation, solve it.}
+    \begin{enumerate}
+        \item Isolate the radical expression on one side of the equal sign. Put all remaining terms on the other side. 
+        \item If the radical is an nth root, raise both sides to the nth power. For example, if it is a square root, then square both sides. If it is a cube root, cube both sides.
+        \item Solve the remaining equation. 
+        \item If a radical term still remains, repeat steps 1-2.
+        \item Confirm solutions by substituting into the original equation.
+    \end{enumerate}
+\end{boxR}
+
+\underline{\textbf{Example 6 - Solving an Equation with One Radical}}
+\vspace{1mm}
+
+Solve $\sqrt{15-2x}=x$.
+
+\vspace{40mm}
+
+
+\underline{\textbf{Example 7 - Solving an Equation with Two Radicals}}
+\vspace{1mm}
+
+Solve $\sqrt{2x+3} + \sqrt{x-2}= 4$.
+
+\newpage
+{\large \textbf{Solving an Absolute Value Equation}}
+
+Next, we will learn how to solve an absolute value equation. Before we look at absolute value equations, let's look at the absolute value function and what it does. 
+\vspace{3mm}
+\begin{boxR}
+The Absolute Value
+    \vspace{1mm}
+    \hline
+    \vspace{2mm}
+    The \textbf{absolute value of} $\mathbf{x}$ is written as $\mathbf{|x|}$. It has the following properties: 
+\begin{align*}
+    \text{If } x &\geq 0, \text{ then } |x| = x. \\
+    \text{If } x &< 0, \text{ then } |x| = -x.
+\end{align*}
+For real numbers A and B, an equation of the form $|A|=B$ with $B \geq 0$ will have solutions when $A=B$ or $A=-B$. If $B < 0$, then the equation $|A|=B$ has no solution. 
+  
+
+\end{boxR}
+Let's see what this means:
+
+\vspace{40mm}
+\begin{boxR}
+    
+
+An \textbf{absolute value equation} in the form $|ax+b|=c$ has the following properties:
+  has the following properties:
+\begin{align*}
+    \text{If } c<0, \hspace{3mm} |ax+b| = c \text{ has no solution. }  \\
+    \text{If } c=0, \hspace{3mm} |ax+b| = c \text{ has one solution. }  \\
+    \text{If } c>0, \hspace{3mm} |ax+b| = c \text{ has two solutions. } 
+\end{align*}
+\end{boxR}
+
+\newpage
+\underline{\textbf{Example 8 - Solve Absolute Value Equations}}
+\vspace{1mm}
+
+Solve the absolute value equations.
+
+  \begin{enumerate}[(a)]
+    \item $|6x+4|=8$
+    \vspace{60mm}
+    \item $|3x+4|=-9$ 
+    \vspace{30mm}
+    \item $|3x-5|-4=6$
+    \vspace{60mm}
+    \item $|-5x+10|=0$
+    \vspace{20mm}
+    \end{enumerate}
+
+
+\newpage
+{\large \textbf{Solving Equations in Quadratic Form}}
+\vspace{3mm}
+
+As a reminder, a quadratic equation is an equation of the form $ax^2 +bx+c=0$. 
+\vspace{3mm}
+
+\textbf{Equations in quadratic form} are equations that follow a similar pattern: the the leading term has a power that is not not always two, but it is double the exponent of the middle term. Lets look at some examples of equations in quadratic form: 
+
+\vspace{40mm}
+
+\begin{boxR}
+\textbf{How To}
+ \vspace{1mm}
+    \hline
+    \vspace{2mm}
+    \textbf{Given an equation in quadratic form, solve it.}
+    \begin{enumerate}
+        \item Identify the exponent on the leading term and determine whether it is double the exponent on the middle term.
+        \item Assuming it is, substitute a variable, such as $u$, for the variable portion of the middle term. 
+        \item Rewrite the equation (with $u$ or other variable) so that it takes on the standard form of a quadratic.
+        \item Solve using one of the usual methods for solving a quadratic.
+        \item Replace the substitution variable with the original term.
+        \item Solve the remaining equation.
+    \end{enumerate}
+\end{boxR}
+\newpage
+\underline{\textbf{Example 9 - Solving a Higher Degree Equation in Quadratic Form}}
+
+Solve this fourth degree equation: $x^4-8x^2-9=0$
+
+\vspace{75mm}
+\underline{\textbf{Example 10 - Solving an Equation in Quadratic Form Containing a Binomial}}
+
+Solve this fourth degree equation: $(x+2)^2+11(x+2)-12=0$
+
+\newpage
+{\large \textbf{Solving Equations in Quadratic Form}}
+\vspace{3mm}
+
+Earlier, we solved rational equations that resulted in solving a linear equation one we cleared the denominator with an LCD (section 2.2). Now we look at solving rational equations that result to a quadratic.
+
+\begin{boxR}
+    \textbf{Given a rational equation, solve it. }
+    \vspace{1mm}
+    \hline
+    \vspace{2mm}
+    \begin{enumerate}
+        \item Factor all denominators in the equation.
+        \item Find the LCD
+        \item Multiply the whole equation through by the LCD. If the LCD is correct, there will be no denominators left. 
+        \item Solve the remaining equation (linear or quadratic).
+        \item Make sure to check solutions back in the original equation.
+    \end{enumerate}
+\end{boxR}
+
+\underline{\textbf{Example 11 - Solving Rational Equation Leading to a Quadratic}}
+\vspace{3mm}
+
+Solve the following rational equation: $\D \frac{-4x}{x-1} + \frac{4}{x+1} = \frac{-8}{x^2-1}$.
+\end{document}
